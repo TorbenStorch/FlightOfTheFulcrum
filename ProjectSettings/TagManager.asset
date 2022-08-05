@@ -6,6 +6,8 @@ TagManager:
   tags:
   - LeftHand
   - RightHand
+  - CableStart
+  - CableEnd
   layers:
   - Default
   - TransparentFX
