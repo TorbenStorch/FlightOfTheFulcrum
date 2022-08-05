@@ -16,6 +16,7 @@ public class TimeScrolling : MonoBehaviour
     public float _blendValue;
     public float _controllerRotZ;
     public Raycast _rayCastScript;
+    public bool enableTimeScrolling;
 
     private GameObject controllerRight;
 
@@ -29,7 +30,7 @@ public class TimeScrolling : MonoBehaviour
         _controllerRotZ = controllerRight.transform.rotation.z * 100;
         _blendValue = _controllerRotZ;
         
-        if (_rayCastScript._rayCastHit == true && _rayCastScript.targetRenderer != null)
+        if (_rayCastScript._rayCastHit == true && _rayCastScript.targetRenderer != null && enableTimeScrolling)
         {
             _tearRenderer = _rayCastScript.targetRenderer;
 
