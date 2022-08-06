@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 69573
+  controlID: 115
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -104,7 +104,7 @@ MonoBehaviour:
   - {fileID: 16}
   - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 3
+  m_LastSelected: 1
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -181,7 +181,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: PhilippAnimation
+  m_LastLoadedLayoutName: 
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 69200
+  controlID: 108
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 69201
+  controlID: 33
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 76418
+  controlID: 34
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1238,10 +1238,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 32}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 607bfbff647bfbff987bfbff9c7bfbffa67bfbff18eefbff4807fcff4c07fcff5007fcff5407fcff8007fcff8c07fcfff867fcff786bfcff78bdfdff8abffdff1ec1fdffa8f5feff8404ffffac04ffff80bcffff84cbffff88cbffff16cdffffead3ffff90ddffff2afbfffff4ffffff7270000032710000367100005e710000847100001a720000be720000da720000e4720000ee72000080730000f07e0000f47e00001c7f0000427f0000d87f00007c80000098800000a2800000ac8000003e8100009286000096860000aa8600001887000058890000708900007a890000ccb90000
+      m_ExpandedIDs: 0eebffff26fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1528,16 +1528,16 @@ MonoBehaviour:
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.33419704, y: 2.0508769, z: 0.2156657}
+    m_Target: {x: 0.14980327, y: -0.14804658, z: -0.07936269}
     speed: 2
-    m_Value: {x: -0.33419704, y: 2.0508769, z: 0.2156657}
+    m_Value: {x: 0.14980327, y: -0.14804658, z: -0.07936269}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1584,17 +1584,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.15061009, y: -0.7780507, z: 0.20346402, w: 0.57514083}
+    m_Target: {x: 0.19421907, y: 0.8031012, z: -0.36010215, w: 0.43322012}
     speed: 2
-    m_Value: {x: 0.15028737, y: -0.77882266, z: 0.20366621, w: 0.5739069}
+    m_Value: {x: 0.19248709, y: 0.80491894, z: -0.35946792, w: 0.43108818}
   m_Size:
-    m_Target: 2.6018069
+    m_Target: 0.24321409
     speed: 2
-    m_Value: 2.4897673
+    m_Value: 0.24321412
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 0.120993994
     m_SpeedNormalized: 0.06045002
@@ -8178,22 +8178,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Animations/Felix/Human Shade
+    - Assets/Prefabs/Felix
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 65
   m_LastFolders:
-  - Assets/Animations/Felix/Human Shade
+  - Assets/Prefabs/Felix
   m_LastFoldersGridSize: 65
-  m_LastProjectPath: Z:\ER - Semester 6\Fulcrum\FlightOfTheFulcrum
+  m_LastProjectPath: G:\Felix\Documents\Unity Projects\ExpandedRealities\S6\FlightOfTheFulcrum\FlightOfTheFulcrum
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 78}
-    m_SelectedIDs: 7c770000
-    m_LastClickedID: 30588
-    m_ExpandedIDs: 0000000006750000087500000a7500000c7500000e7500001475000028750000327500007a77000000ca9a3b
+    scrollPos: {x: 0, y: 62}
+    m_SelectedIDs: 287b0000
+    m_LastClickedID: 31528
+    m_ExpandedIDs: 00000000d07500007e770000807700008277000094770000bc7800001c790000227c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -8221,7 +8221,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000006750000087500000a7500000c7500000e750000
+    m_ExpandedIDs: 00000000d0750000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
