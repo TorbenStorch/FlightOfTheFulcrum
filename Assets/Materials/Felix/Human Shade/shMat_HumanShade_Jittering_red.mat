@@ -72,6 +72,7 @@ Material:
     - Color_1DEAAAEB: {r: 0, g: 0, b: 0, a: 0}
     - Color_51316B18: {r: 0, g: 0, b: 0, a: 0}
     - Color_B3D1197F: {r: 0.754717, g: 0, b: 0, a: 0.8235294}
+    - _EdgeTint: {r: 1, g: 0.390566, b: 0.42163527, a: 0.8235294}
   m_BuildTextureStacks: []
 --- !u!114 &8594273912966615713
 MonoBehaviour:

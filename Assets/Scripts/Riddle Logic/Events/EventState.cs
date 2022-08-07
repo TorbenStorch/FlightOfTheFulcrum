@@ -1,7 +1,7 @@
 /*-------------------------------------------------------
 Creator: Torben Storch
 Project: Fulcrum
-Last change: 07-06-2022
+Last change: 07-08-2022
 Topic: Calling of NextState, Activate/Deactivate objects & State Information.
 ---------------------------------------------------------*/
 using System.Collections;
