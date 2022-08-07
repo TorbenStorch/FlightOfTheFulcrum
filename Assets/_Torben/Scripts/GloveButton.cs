@@ -14,6 +14,11 @@ public class GloveButton : MonoBehaviour
 	[SerializeField] private GameObject handCollider;
 	[SerializeField] private GameObject frame;
 
+	//values from Philipp
+	[SerializeField] private Material GloveEmissiveMat;
+	[SerializeField] Color StetoColor;
+	[SerializeField] Color TimeColor;
+
 	[Range(0.1f,1f)]
 	[SerializeField] private float timeToGoDown = 0.1f;
 	[Range(0.1f, 1f)]
@@ -25,7 +30,7 @@ public class GloveButton : MonoBehaviour
 	bool buttonDown;
 	Vector3 startPos;
 
-	private void Start() => startPos = gameObject.transform.localPosition;
+    private void Start() => startPos = gameObject.transform.localPosition;
 
 	private void OnTriggerEnter(Collider other)
 	{
@@ -62,5 +67,16 @@ public class GloveButton : MonoBehaviour
 		}
 		buttonDown = false;
 		yield return null;
+	}
+
+	//extension from philipp to make the glove material change
+	public void changeColorToTime()
+    {
+        GloveEmissiveMat.SetColor("_EmissionColor", TimeColor);
+    }
+
+	public void changeColorToSteto()
+	{
+		GloveEmissiveMat.SetColor("_EmissionColor", StetoColor);
 	}
 }
