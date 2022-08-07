@@ -150,7 +150,7 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BlendToFuture: 0.11071471
-    - _BlendToPast: 0.15379944
+    - _BlendToPast: -0
     - _BumpScale: 1
     - _CastShadows: 1
     - _ClearCoatMask: 0
