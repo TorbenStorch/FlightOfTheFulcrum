@@ -1,3 +1,9 @@
+/*-------------------------------------------------------
+Creator: Torben Storch
+Project: Fulcrum
+Last change: 07-06-2022
+Topic: UnityEvents for each state & when to call which.
+---------------------------------------------------------*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +19,7 @@ public class EventManager : MonoBehaviour
 
     void Start()
     {
-        CallEvent(1);
+        CallEvent(1); //begin with event/state 1
     }
 
     public void CallEvent(int i)
