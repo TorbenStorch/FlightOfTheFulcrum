@@ -70,13 +70,9 @@ public class GloveButton : MonoBehaviour
 	}
 
 	//extension from philipp to make the glove material change
-	public void changeColorToTime()
-    {
-        GloveEmissiveMat.SetColor("_EmissionColor", TimeColor);
-    }
+	public void changeColorToTime() =>  GloveEmissiveMat.SetColor("_EmissionColor", TimeColor);
+    
 
-	public void changeColorToSteto()
-	{
-		GloveEmissiveMat.SetColor("_EmissionColor", StetoColor);
-	}
+	public void changeColorToSteto() => GloveEmissiveMat.SetColor("_EmissionColor", StetoColor);
+	
 }
