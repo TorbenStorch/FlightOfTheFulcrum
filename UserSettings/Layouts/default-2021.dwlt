@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 421}
   m_MaxSize: {x: 10000, y: 10000}
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 185
+  controlID: 112
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 97
+  controlID: 22
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 98
+  controlID: 23
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -3187,10 +3187,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1586}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d028f6ff78d2fffff0d3fffffcfaffff
+      m_ExpandedIDs: 16aafffff6e7ffff6efaffffd6780000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -3484,9 +3484,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.3676875, y: 0.21780801, z: -13.482777}
+    m_Target: {x: -1.977428, y: -10.523649, z: -43.380005}
     speed: 2
-    m_Value: {x: 3.3676875, y: 0.21780801, z: -13.482777}
+    m_Value: {x: -1.977428, y: -10.523649, z: -43.380005}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -3533,13 +3533,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.2045843, y: 0.7895676, z: -0.46424735, w: -0.34615207}
+    m_Target: {x: 0.0023885923, y: -0.95841974, z: 0.2864139, w: 0.004567867}
     speed: 2
-    m_Value: {x: -0.20486736, y: 0.789669, z: -0.46112072, w: -0.34902698}
+    m_Value: {x: 0.0028173262, y: -0.9581111, z: 0.28632012, w: 0.0060036066}
   m_Size:
-    m_Target: 1.5176812
+    m_Target: 23.019789
     speed: 2
-    m_Value: 1.5176812
+    m_Value: 22.028505
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -3724,22 +3724,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials/Textures/WoodGrid
+    - Assets/Models/RichtersOffice_Main
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 65
   m_LastFolders:
-  - Assets/Materials/Textures/WoodGrid
+  - Assets/Models/RichtersOffice_Main
   m_LastFoldersGridSize: 65
   m_LastProjectPath: Z:\ER - Semester 6\Fulcrum\FlightOfTheFulcrum
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 735}
-    m_SelectedIDs: c6960000
-    m_LastClickedID: 38598
-    m_ExpandedIDs: 00000000907a0000927a0000947a0000967a0000987a00009a7a00009c7a00009e7a0000a07a00003c7c0000487c0000527c0000227d00000c7e000014940000209700003297000000ca9a3b
+    scrollPos: {x: 0, y: 574}
+    m_SelectedIDs: a8810000
+    m_LastClickedID: 33192
+    m_ExpandedIDs: 00000000988100009a8100009c8100009e810000a0810000a2810000a4810000a6810000a8810000bc810000c081000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3767,7 +3767,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000907a0000927a0000947a0000967a0000987a00009a7a00009c7a00009e7a0000a07a0000
+    m_ExpandedIDs: 00000000988100009a8100009c8100009e810000a0810000a2810000a4810000a6810000a8810000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
