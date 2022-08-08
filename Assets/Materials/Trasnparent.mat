@@ -104,7 +104,7 @@ Material:
     m_Floats:
     - _AO_Strength: 1
     - _AlphaClip: 0
-    - _Alpha_Strength: 7.16
+    - _Alpha_Strength: 58.23
     - _Blend: 0
     - _BumpScale: 1
     - _CastShadows: 1
