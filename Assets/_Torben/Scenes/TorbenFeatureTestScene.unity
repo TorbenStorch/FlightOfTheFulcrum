@@ -8458,6 +8458,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handCollider: {fileID: 1301135955}
   frame: {fileID: 1712156958429411000}
+  GloveEmissiveMat: {fileID: 0}
+  StetoColor: {r: 0, g: 0, b: 0, a: 0}
+  TimeColor: {r: 0, g: 0, b: 0, a: 0}
   timeToGoDown: 0.2
   timeToGoUp: 0.2
   onPress:
