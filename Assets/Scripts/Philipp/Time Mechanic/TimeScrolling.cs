@@ -30,7 +30,7 @@ public class TimeScrolling : MonoBehaviour
         _controllerRotZ = controllerRight.transform.rotation.z * 100;
         _blendValue = _controllerRotZ;
         
-        if (_rayCastScript._rayCastHit == true && _rayCastScript.targetRenderer != null && enableTimeScrolling)
+        if (_rayCastScript._rayCastHit == true && _rayCastScript.targetRenderer != null)
         {
             _tearRenderer = _rayCastScript.targetRenderer;
 

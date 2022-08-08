@@ -36,7 +36,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo0:
-        m_Texture: {fileID: 2800000, guid: 0910d9cc31017dd4f8552764537b4b97, type: 3}
+        m_Texture: {fileID: 2800000, guid: 40fea4c85534e62459715c11a084b011, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Albedo1:
@@ -149,8 +149,8 @@ Material:
     - _Alpha2: 0
     - _AlphaClip: 0
     - _Blend: 0
-    - _BlendToFuture: 0.11071471
-    - _BlendToPast: -0
+    - _BlendToFuture: 0.1105582
+    - _BlendToPast: 0.3991217
     - _BumpScale: 1
     - _CastShadows: 1
     - _ClearCoatMask: 0

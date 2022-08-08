@@ -13,12 +13,14 @@ public class EventState_ConditionMedicine : EventState
 {
  //   public UnityEvent medicineCorrect;
     public bool medicineInCorrectPos { set; get; } //can be changed outside of this sctipt (for ex. in unity events)
+	[SerializeField] private TearTimeMeasurement bottleTearTimeMeasurement;
 
-    void Update()
-    {
-        if (medicineInCorrectPos)
-        {
-            NextStateEvent();
-        }
-    }
+	void Update()
+	{
+		if (bottleTearTimeMeasurement == null)
+			Debug.LogError("Bottle Tear Missing");
+
+		if (medicineInCorrectPos && bottleTearTimeMeasurement.tearCorrect)
+			NextStateEvent();
+	}
 }

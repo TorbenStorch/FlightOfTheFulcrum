@@ -66,14 +66,14 @@ Material:
     - _Jitter_Strength: 100
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Transparency: 0.6
+    - _Transparency: 0.75
     - _Vertex_Displacement_Strength: 0.0005
     m_Colors:
     - Color_1DEAAAEB: {r: 0, g: 0, b: 0, a: 0}
     - Color_51316B18: {r: 0, g: 0, b: 0, a: 0}
     - Color_B3D1197F: {r: 0.754717, g: 0, b: 0, a: 0.8235294}
     - _EdgeTint: {r: 1, g: 0.390566, b: 0.42163527, a: 0.8235294}
-    - _EdgeTintTest: {r: 0.93333334, g: 0.44313726, b: 0.48142073, a: 0.8235294}
+    - _EdgeTintTest: {r: 0.8490566, g: 0.07609467, b: 0.13793157, a: 0.8235294}
   m_BuildTextureStacks: []
 --- !u!114 &8594273912966615713
 MonoBehaviour:
