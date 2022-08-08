@@ -10,7 +10,7 @@ public class CableRipping : MonoBehaviour
     [SerializeField] InputActionReference rightVelocity;
     [Range (0.2f, 0.5f)]
     [SerializeField] float cableResistanceMin;
-    [Range(0.6f, 0.9f)]
+    [Range(0.6f, 2.0f)]
     [SerializeField] float cableResistanceMax;
     private float l_veloX, l_veloY, l_veloZ, r_veloX, r_veloY, r_veloZ;
 
@@ -18,12 +18,6 @@ public class CableRipping : MonoBehaviour
     [SerializeField] float damper = 200;
     [SerializeField] float minDistance= 0.0f;
     [SerializeField] float maxDistance = 0.01f;
-
-    List<GameObject> cableStartObjects = new List<GameObject>();
-    private GameObject[] cableStartPositionAR;
-
-    List<CableEnds> cableEndObjects = new List<CableEnds>();
-    private GameObject[] cableEndPositionAR;
 
     private class CableEnds
     {
@@ -33,29 +27,61 @@ public class CableRipping : MonoBehaviour
         public bool isConnected = true;
     }
 
+    List<GameObject> r_cableStartObjects = new List<GameObject>();
+    private GameObject[] r_cableStartPositionAR;
+
+    List<CableEnds> r_cableEndObjects = new List<CableEnds>();
+    private GameObject[] r_cableEndPositionAR;
+
+    List<GameObject> l_cableStartObjects = new List<GameObject>();
+    private GameObject[] l_cableStartPositionAR;
+
+    List<CableEnds> l_cableEndObjects = new List<CableEnds>();
+    private GameObject[] l_cableEndPositionAR;
+
+
     private void Awake()
     {
         #region array into lists
-        cableStartPositionAR = GameObject.FindGameObjectsWithTag("CableStart");
-        cableEndPositionAR = GameObject.FindGameObjectsWithTag("CableEnd");
-        
-        for (int i = 0; i < cableEndPositionAR.Length; i++)
+        r_cableStartPositionAR = GameObject.FindGameObjectsWithTag("r_CableStart");
+        r_cableEndPositionAR = GameObject.FindGameObjectsWithTag("r_CableEnd");
+
+        l_cableStartPositionAR = GameObject.FindGameObjectsWithTag("l_CableStart");
+        l_cableEndPositionAR = GameObject.FindGameObjectsWithTag("l_CableEnd");
+
+        for (int i = 0; i < r_cableEndPositionAR.Length; i++)
         {
-            cableEndObjects.Add(new CableEnds { gmObj = cableEndPositionAR[i], breakForce = Random.Range(cableResistanceMin, cableResistanceMax) });
-        }
-        
-        for (int i = 0; i < cableStartPositionAR.Length; i++)
-        {
-            cableStartPositionAR[i].GetComponent<CableComponent>().endPoint = cableEndObjects[i].gmObj.transform;
-            cableStartObjects.Add(cableStartPositionAR[i].gameObject);
+            r_cableEndObjects.Add(new CableEnds { gmObj = r_cableEndPositionAR[i], breakForce = Random.Range(cableResistanceMin, cableResistanceMax) });
         }
 
-        for (int i = 0; i < cableEndObjects.Count; i++)
+        for (int i = 0; i < l_cableEndPositionAR.Length; i++)
         {
-            cableEndObjects[i].startingPoint = cableStartObjects[i];
+            l_cableEndObjects.Add(new CableEnds { gmObj = l_cableEndPositionAR[i], breakForce = Random.Range(cableResistanceMin, cableResistanceMax) });
+        }
+
+        for (int i = 0; i < r_cableStartPositionAR.Length; i++)
+        {
+            r_cableStartPositionAR[i].GetComponent<CableComponent>().endPoint = r_cableEndObjects[i].gmObj.transform;
+            r_cableStartObjects.Add(r_cableStartPositionAR[i].gameObject);
+        }
+
+        for (int i = 0; i < l_cableStartPositionAR.Length; i++)
+        {
+            l_cableStartPositionAR[i].GetComponent<CableComponent>().endPoint = l_cableEndObjects[i].gmObj.transform;
+            l_cableStartObjects.Add(l_cableStartPositionAR[i].gameObject);
+        }
+
+        for (int i = 0; i < r_cableEndObjects.Count; i++)
+        {
+            r_cableEndObjects[i].startingPoint = r_cableStartObjects[i];
+        }
+
+        for (int i = 0; i < l_cableEndObjects.Count; i++)
+        {
+            l_cableEndObjects[i].startingPoint = l_cableStartObjects[i];
         }
         #endregion
-        
+
         if (Use_Debug_Statements)
         {
             PrintList();
@@ -64,14 +90,14 @@ public class CableRipping : MonoBehaviour
 
     void PrintList()
     {
-        for (int l = 0; l < cableStartObjects.Count; l++)
+        for (int l = 0; l < r_cableStartObjects.Count; l++)
         {
-            Debug.Log(" || GameObject Name: " + cableStartObjects[l].name);
+            Debug.Log(" || GameObject Name: " + r_cableStartObjects[l].name);
         }
 
-        for (int i = 0; i < cableEndObjects.Count; i++)
+        for (int i = 0; i < r_cableEndObjects.Count; i++)
         {
-            Debug.Log(" || GameObject Name: " + cableEndObjects[i].gmObj.name + " || Cable Break Force: " + cableEndObjects[i].breakForce);
+            Debug.Log(" || GameObject Name: " + r_cableEndObjects[i].gmObj.name + " || Cable Break Force: " + r_cableEndObjects[i].breakForce);
         }
     }
 
@@ -89,17 +115,25 @@ public class CableRipping : MonoBehaviour
 
         if (Use_Debug_Statements)
         {
-            Debug.Log("Left Velocity = " + leftVelocity);
+            Debug.Log("Left Velocity = " + l_veloX);
             Debug.Log("Right Velocity = " + r_veloX);
         }
 
-        for (int i = 0; i < cableEndObjects.Count; i++)
+        for (int i = 0; i < r_cableEndObjects.Count; i++)
         {
-            if (cableEndObjects[i].isConnected || r_veloX > cableEndObjects[i].breakForce)
+            if (/*cableEndObjects[i].isConnected || */ r_veloX > r_cableEndObjects[i].breakForce)
             {
-                DetachCable(cableEndObjects[i]);
+                DetachCable(r_cableEndObjects[i]);
             }
-        } 
+        }
+
+        for (int i = 0; i < l_cableEndObjects.Count; i++)
+        {
+            if (l_veloX > l_cableEndObjects[i].breakForce)
+            {
+                DetachCable(l_cableEndObjects[i]);
+            }
+        }
     }
 
     private void DetachCable(CableEnds item)
