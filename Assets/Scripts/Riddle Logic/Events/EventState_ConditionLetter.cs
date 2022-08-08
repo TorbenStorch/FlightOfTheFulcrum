@@ -9,9 +9,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ConditionLetter : MonoBehaviour
+public class EventState_ConditionLetter : EventState
 {
-	public UnityEvent letterCorrect;
+	//public UnityEvent letterCorrect;
 
 	public bool letterInCorrectPos { set; get; } //can be changed outside of this sctipt (for ex. in unity events)
 	[SerializeField] private TearTimeMeasurement letterTearTimeMeasurement;
@@ -22,6 +22,6 @@ public class ConditionLetter : MonoBehaviour
 			Debug.LogError("Letter Tear Missing");
 
 		if (letterInCorrectPos && letterTearTimeMeasurement.tearCorrect)
-			letterCorrect.Invoke();
+			NextStateEvent();
 	}
 }

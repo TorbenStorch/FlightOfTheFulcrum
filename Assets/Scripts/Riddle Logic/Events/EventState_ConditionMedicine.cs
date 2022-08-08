@@ -9,16 +9,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ConditionMedicine : MonoBehaviour
+public class EventState_ConditionMedicine : EventState
 {
-    public UnityEvent medicineCorrect;
+ //   public UnityEvent medicineCorrect;
     public bool medicineInCorrectPos { set; get; } //can be changed outside of this sctipt (for ex. in unity events)
 
     void Update()
     {
         if (medicineInCorrectPos)
         {
-            medicineCorrect.Invoke();
+            NextStateEvent();
         }
     }
 }

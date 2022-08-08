@@ -19,8 +19,8 @@ public class FadeInOut : MonoBehaviour
 
 	[Header("Shader Transparent Material")]
 	[SerializeField] Renderer shaderRenderer;
-	[HideInInspector] public int transparencyID = Shader.PropertyToID("_Transparency");
-	[HideInInspector] public int edgeTintID = Shader.PropertyToID("_EdgeTint");
+	[HideInInspector] public static int transparencyID = Shader.PropertyToID("_Transparency");
+	[HideInInspector] public static int edgeTintID = Shader.PropertyToID("_EdgeTintTest");
 
 	[Header("Color Stuff")]
 	Color startColor;
@@ -131,7 +131,7 @@ public class FadeInOut : MonoBehaviour
 	#region Shader EdgeTint Color
 	public void FadeShaderEdgeTint()
 	{
-		//shaderRenderer.material.SetColor(edgeTintID, startColor);
+		//shaderRenderer.material.SetColor(edgeTintID, endColor);
 		startColor = shaderRenderer.material.GetColor(edgeTintID);
 		StartCoroutine(FadeEdgeTint());
 	}

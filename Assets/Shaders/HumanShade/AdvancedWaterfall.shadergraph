@@ -20490,7 +20490,7 @@
     "m_DefaultRefNameVersion": 0,
     "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Color_B3D1197F",
-    "m_OverrideReferenceName": "_EdgeTint",
+    "m_OverrideReferenceName": "_EdgeTintTest",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
