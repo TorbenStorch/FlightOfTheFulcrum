@@ -432,6 +432,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!1 &993414803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5237065806078470850, guid: e5bc4d574a5de774aae7370082bfd799,
+    type: 3}
+  m_PrefabInstance: {fileID: 204684312}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1288904913
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +573,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1336675274
 Transform:
   m_ObjectHideFlags: 0
@@ -605,6 +611,7 @@ MonoBehaviour:
   _controllerRotZ: 0
   _rayCastScript: {fileID: 353148270}
   enableTimeScrolling: 0
+  heatFVX: {fileID: 993414803}
 --- !u!114 &1336675277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1544,7 +1551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1770504341
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2739,6 +2746,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RichterGlove_V2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352571685331850805, guid: ddf00459a447c7b48ada25085b64d3c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8692399305522187407, guid: ddf00459a447c7b48ada25085b64d3c2,
         type: 3}
