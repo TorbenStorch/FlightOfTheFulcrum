@@ -11772,6 +11772,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5bc4d574a5de774aae7370082bfd799, type: 3}
+--- !u!1 &501647315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5237065806078470850, guid: e5bc4d574a5de774aae7370082bfd799,
+    type: 3}
+  m_PrefabInstance: {fileID: 501647314}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &502283133 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6024149945523619558, guid: ab42e1d2f6be98c4b96dfa040c8e724b,
@@ -14067,6 +14073,7 @@ MonoBehaviour:
   _controllerRotZ: 0
   _rayCastScript: {fileID: 1683975939}
   enableTimeScrolling: 0
+  heatFVX: {fileID: 501647315}
 --- !u!114 &616519450
 MonoBehaviour:
   m_ObjectHideFlags: 0
