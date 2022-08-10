@@ -17,12 +17,14 @@ public class TimeScrolling : MonoBehaviour
     public float _controllerRotZ;
     public Raycast _rayCastScript;
     public bool enableTimeScrolling;
+    [SerializeField] GameObject heatFVX;
 
     private GameObject controllerRight;
 
     void Start()
     {
         controllerRight = this.gameObject;
+        heatFVX.SetActive(true);
     }
 
     void Update()
@@ -32,6 +34,7 @@ public class TimeScrolling : MonoBehaviour
         
         if (_rayCastScript._rayCastHit == true && _rayCastScript.targetRenderer != null)
         {
+            heatFVX.SetActive(true);
             _tearRenderer = _rayCastScript.targetRenderer;
 
             if (_blendValue >= 0)
@@ -45,6 +48,10 @@ public class TimeScrolling : MonoBehaviour
                 _rayCastScript.targetMaterial.SetFloat("_BlendToFuture", (_blendValue - 2 * _blendValue) / 100);
             }
         }
+        else
+        {
+            heatFVX.SetActive(false);
+        }
 
         if (_rayCastScript._rayCastHit == true && _rayCastScript.targetMeshRenderer != null)
         {
@@ -53,6 +60,10 @@ public class TimeScrolling : MonoBehaviour
             
             else if (_blendValue < 0)           
                 _rayCastScript.targetMaterial.SetFloat("_BlendToFuture", (_blendValue - 2 * _blendValue) / 100);
+        }
+        else
+        {
+            heatFVX.SetActive(false);
         }
 
         // Debug.Log("Blend to Past Value: " + _rayCastScript.targetMaterial.GetFloat("_BlendToPast").ToString());
