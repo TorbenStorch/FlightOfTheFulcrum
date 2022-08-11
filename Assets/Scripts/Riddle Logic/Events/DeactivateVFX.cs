@@ -24,6 +24,7 @@ public class DeactivateVFX : MonoBehaviour
 			yield return null;
 		}
 		soulVfx.SetFloat("Thickness", goalFadeOutThicknessAmount);
+		soulVfx.enabled = false;
 		yield return null;
 	}
 
