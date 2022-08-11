@@ -15,7 +15,7 @@ public class FadeInOut : MonoBehaviour
 
 	[Header("Normal Transparent Material")]
 	[SerializeField] Renderer materialAlphaRenderer;
-	Color aplhaColor;
+	Color alphaColor;
 
 	[Header("Shader Transparent Material")]
 	[SerializeField] Renderer shaderRenderer;
@@ -44,9 +44,9 @@ public class FadeInOut : MonoBehaviour
 	{
 		if (materialAlphaRenderer == null) return;
 
-		aplhaColor = materialAlphaRenderer.material.color;
-		aplhaColor.a = 0;
-		materialAlphaRenderer.material.color = aplhaColor;
+		alphaColor = materialAlphaRenderer.material.color;
+		alphaColor.a = 0;
+		materialAlphaRenderer.material.color = alphaColor;
 
 		StartCoroutine(FadeAlphaMatIn());
 	}
@@ -54,7 +54,7 @@ public class FadeInOut : MonoBehaviour
 	{
 		if (materialAlphaRenderer == null) return;
 
-		aplhaColor = materialAlphaRenderer.material.color;
+		alphaColor = materialAlphaRenderer.material.color;
 		//aplhaColor.a = 1;
 		//myRenderer.material.color = aplhaColor;
 
@@ -64,11 +64,11 @@ public class FadeInOut : MonoBehaviour
 	IEnumerator FadeAlphaMatIn()
 	{
 		yield return new WaitForSeconds(delayBeforeFadeInBegin);
-		aplhaColor = materialAlphaRenderer.material.color;
-		while (aplhaColor.a < goalFadeInTransparencyAmount)
+		alphaColor = materialAlphaRenderer.material.color;
+		while (alphaColor.a < goalFadeInTransparencyAmount)
 		{
-			aplhaColor.a += fadeInSteps;
-			materialAlphaRenderer.material.color = aplhaColor;
+			alphaColor.a += fadeInSteps;
+			materialAlphaRenderer.material.color = alphaColor;
 			yield return null;
 		}
 		yield return null;
@@ -76,10 +76,10 @@ public class FadeInOut : MonoBehaviour
 	IEnumerator FadeAlphaMatOut()
 	{
 		yield return new WaitForSeconds(delayBeforeFadeOutBegin);
-		while (aplhaColor.a > goalFadeOutTransparencyAmount)
+		while (alphaColor.a > goalFadeOutTransparencyAmount)
 		{
-			aplhaColor.a -= fadeOutSteps;
-			materialAlphaRenderer.material.color = aplhaColor;
+			alphaColor.a -= fadeOutSteps;
+			materialAlphaRenderer.material.color = alphaColor;
 			yield return null;
 		}
 		yield return null;

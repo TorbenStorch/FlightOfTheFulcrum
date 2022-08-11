@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_1/Scene_Level_1.unity
     guid: f78963bc2e2787d4482833d54f9b860d
+  - enabled: 1
+    path: Assets/Scenes/Felix/Scene_Corridor.unity
+    guid: a9eb5c3d3b7c0a34c8d816d317518223
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e043639c6cb03184aa8c58ddd9b4cc94,
       type: 2}

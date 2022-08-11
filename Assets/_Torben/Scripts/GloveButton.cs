@@ -16,8 +16,9 @@ public class GloveButton : MonoBehaviour
 
 	//values from Philipp
 	[SerializeField] private Material GloveEmissiveMat;
-	[SerializeField] Color StetoColor;
-	[SerializeField] Color TimeColor;
+	[SerializeField] Material StetoColor;
+	[SerializeField] Material TimeColor;
+	[SerializeField] GameObject glove;
 
 	[Range(0.1f,1f)]
 	[SerializeField] private float timeToGoDown = 0.1f;
@@ -70,9 +71,16 @@ public class GloveButton : MonoBehaviour
 	}
 
 	//extension from philipp to make the glove material change
-	public void changeColorToTime() =>  GloveEmissiveMat.SetColor("_EmissionColor", TimeColor);
+	//public void changeColorToTime() =>  GloveEmissiveMat.SetColor("_EmissionColor", TimeColor);
     
 
-	public void changeColorToSteto() => GloveEmissiveMat.SetColor("_EmissionColor", StetoColor);
+	//public void changeColorToSteto() => GloveEmissiveMat.SetColor("_EmissionColor", StetoColor);
+
+	public void changeGloveMaterial(Material gloveMaterial)
+	{
+		glove.GetComponent<SkinnedMeshRenderer>().materials[1] = gloveMaterial;
+    }
+
+
 	
 }

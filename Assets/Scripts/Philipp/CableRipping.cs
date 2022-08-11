@@ -129,7 +129,7 @@ public class CableRipping : MonoBehaviour
 
         for ( int i = 0; i < l_cableEndObjects.Count; i++)
         {
-            if (l_cableEndObjects[i].isConnected ||
+            if (// l_cableEndObjects[i].isConnected ||
                 l_veloX > l_cableEndObjects[i].breakForce)
             {
                 l_DetachCable(l_cableEndObjects[i]);
@@ -138,7 +138,7 @@ public class CableRipping : MonoBehaviour
  
         for (int i = 0; i < r_cableEndObjects.Count; i++)
         {
-            if ( r_cableEndObjects[i].isConnected || 
+            if (// r_cableEndObjects[i].isConnected || 
                 r_veloX > r_cableEndObjects[i].breakForce)
             {
                 r_DetachCable(r_cableEndObjects[i]);
