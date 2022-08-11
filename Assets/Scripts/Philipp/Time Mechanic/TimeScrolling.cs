@@ -18,6 +18,7 @@ public class TimeScrolling : MonoBehaviour
     public Raycast _rayCastScript;
     public bool enableTimeScrolling;
     [SerializeField] GameObject heatFVX;
+    private AudioSource manipulationSound;
 
     private GameObject controllerRight;
 
@@ -25,6 +26,7 @@ public class TimeScrolling : MonoBehaviour
     {
         controllerRight = this.gameObject;
         heatFVX.SetActive(true);
+        manipulationSound = transform.GetChild(0).GetComponent<AudioSource>();
     }
 
     void Update()
@@ -36,6 +38,7 @@ public class TimeScrolling : MonoBehaviour
         {
             heatFVX.SetActive(true);
             _tearRenderer = _rayCastScript.targetRenderer;
+            manipulationSound.Play();
 
             if (_blendValue >= 0)
             {
@@ -51,6 +54,7 @@ public class TimeScrolling : MonoBehaviour
         else
         {
             heatFVX.SetActive(false);
+            manipulationSound.Stop();
         }
 
         if (_rayCastScript._rayCastHit == true && _rayCastScript.targetMeshRenderer != null)
