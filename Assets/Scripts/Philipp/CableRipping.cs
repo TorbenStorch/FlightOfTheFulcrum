@@ -25,6 +25,7 @@ public class CableRipping : MonoBehaviour
         public GameObject startingPoint;
         public float breakForce;
         public bool isConnected = true;
+        public AudioSource audioSource;
     }
 
     private class l_CableEnds
@@ -33,6 +34,7 @@ public class CableRipping : MonoBehaviour
         public GameObject startingPoint;
         public float breakForce;
         public bool isConnected = true;
+        public AudioSource audioSource;
     }
 
     List<GameObject> r_cableStartObjects = new List<GameObject>();
@@ -59,12 +61,12 @@ public class CableRipping : MonoBehaviour
 
         for (int i = 0; i < r_cableEndPositionAR.Length; i++)
         {
-            r_cableEndObjects.Add(new r_CableEnds { gmObj = r_cableEndPositionAR[i], breakForce = Random.Range(cableResistanceMin, cableResistanceMax) });
+            r_cableEndObjects.Add(new r_CableEnds {gmObj = r_cableEndPositionAR[i], breakForce = Random.Range(cableResistanceMin, cableResistanceMax), audioSource = r_cableEndPositionAR[i].GetComponent<AudioSource>() });
         }
 
         for (int i = 0; i < l_cableEndPositionAR.Length; i++)
         {
-            l_cableEndObjects.Add(new l_CableEnds { gmObj = l_cableEndPositionAR[i], breakForce = Random.Range(cableResistanceMin, cableResistanceMax) });
+            l_cableEndObjects.Add(new l_CableEnds { gmObj = l_cableEndPositionAR[i], breakForce = Random.Range(cableResistanceMin, cableResistanceMax), audioSource = l_cableEndPositionAR[i].GetComponent<AudioSource>() });
         }
 
         for (int i = 0; i < r_cableStartPositionAR.Length; i++)
@@ -163,6 +165,9 @@ public class CableRipping : MonoBehaviour
         item.gmObj.GetComponent<Rigidbody>().useGravity = true;
         item.isConnected = false;
 
+        //Play audio
+        item.audioSource.Play();
+
         if (Use_Debug_Statements)
         {
             Debug.Log("Cable Detached: " + item.gmObj.name);
@@ -184,6 +189,9 @@ public class CableRipping : MonoBehaviour
         item.gmObj.GetComponent<BoxCollider>().isTrigger = false;
         item.gmObj.GetComponent<Rigidbody>().useGravity = true;
         item.isConnected = false;
+
+        //Play audio
+        item.audioSource.Play();
 
         if (Use_Debug_Statements)
         {
