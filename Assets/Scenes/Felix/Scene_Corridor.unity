@@ -13908,7 +13908,7 @@ GameObject:
   - component: {fileID: 2836248484819328403}
   - component: {fileID: 2836248484819328402}
   - component: {fileID: 2836248484819328405}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GrabPoint (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15336,7 +15336,7 @@ GameObject:
   - component: {fileID: 4457922339235934060}
   - component: {fileID: 4457922339235934061}
   - component: {fileID: 4457922339235934062}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GrabPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15419,7 +15419,7 @@ GameObject:
   - component: {fileID: 4457922339655003738}
   - component: {fileID: 4457922339655003736}
   - component: {fileID: 4457922339655003737}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RC_doorHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15467,8 +15467,8 @@ HingeJoint:
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
-    min: -90
-    max: 0
+    min: -85
+    max: 85
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -15645,7 +15645,7 @@ GameObject:
   - component: {fileID: 4457922339718355080}
   - component: {fileID: 4457922339718355081}
   - component: {fileID: 4457922339718355082}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Door_Fixed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15728,7 +15728,7 @@ GameObject:
   - component: {fileID: 4457922340000170872}
   - component: {fileID: 4457922340000170870}
   - component: {fileID: 4457922340000170871}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15761,7 +15761,7 @@ GameObject:
   - component: {fileID: 4457922340139089792}
   - component: {fileID: 4457922340139089854}
   - component: {fileID: 4457922340139089855}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube.030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15894,7 +15894,7 @@ GameObject:
   - component: {fileID: 4457922340331891465}
   - component: {fileID: 4457922340331891463}
   - component: {fileID: 4457922340331891464}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RC_doorHandle_Base (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15991,7 +15991,7 @@ GameObject:
   - component: {fileID: 4457922340333275365}
   - component: {fileID: 4457922340333275366}
   - component: {fileID: 4457922340333275367}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Glass_Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16074,7 +16074,7 @@ GameObject:
   - component: {fileID: 4457922340534777625}
   - component: {fileID: 4457922340534777623}
   - component: {fileID: 4457922340534777624}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RC_doorHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16157,7 +16157,7 @@ GameObject:
   - component: {fileID: 4457922340593044294}
   - component: {fileID: 4457922340593044292}
   - component: {fileID: 4457922340593044293}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RC_doorHandle_Base (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17182,7 +17182,7 @@ GameObject:
   - component: {fileID: 6239613375628599211}
   - component: {fileID: 7680830053262307717}
   - component: {fileID: 3048847086755979780}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DoorSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
