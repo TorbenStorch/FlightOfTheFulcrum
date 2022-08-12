@@ -34,7 +34,7 @@ public class TimeScrolling : MonoBehaviour
         _controllerRotZ = controllerRight.transform.rotation.z * 100;
         _blendValue = _controllerRotZ;
         
-        if (_rayCastScript._rayCastHit == true && _rayCastScript.targetRenderer != null)
+        if (_rayCastScript._rayCastHit == true && _rayCastScript.targetRenderer != null && enableTimeScrolling)
         {
             heatFVX.SetActive(true);
             _tearRenderer = _rayCastScript.targetRenderer;
@@ -57,7 +57,7 @@ public class TimeScrolling : MonoBehaviour
             manipulationSound.Stop();
         }
 
-        if (_rayCastScript._rayCastHit == true && _rayCastScript.targetMeshRenderer != null)
+        if (_rayCastScript._rayCastHit == true && _rayCastScript.targetMeshRenderer != null && enableTimeScrolling)
         {
             if (_blendValue >= 0)
                 _rayCastScript.targetMaterial.SetFloat("_BlendToPast", _blendValue / 100);
@@ -74,4 +74,8 @@ public class TimeScrolling : MonoBehaviour
         // Debug.Log("Blend to Past Future: " + _rayCastScript.targetMaterial.GetFloat("_BlendToFuture").ToString());
         // Debug.Log("controller rotation z = " + _blendValue / 100);
     }
+
+    public void enableTimeScroll() => enableTimeScrolling = true;
+    public void disableTimeScroll() => enableTimeScrolling = false;
+
 }
