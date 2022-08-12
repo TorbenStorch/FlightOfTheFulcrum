@@ -1323,7 +1323,7 @@ Transform:
   m_GameObject: {fileID: 48175136}
   m_LocalRotation: {x: -0, y: -0.70721334, z: -0, w: 0.70700026}
   m_LocalPosition: {x: -3.011, y: 1.0805994, z: 3.01}
-  m_LocalScale: {x: 0.35026, y: 0.35026, z: 0.022211736}
+  m_LocalScale: {x: 0.36574146, y: 0.36574146, z: 0.023193493}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 906712145}
@@ -6803,8 +6803,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283959092}
-  m_LocalRotation: {x: -0, y: 0.7933518, z: -0, w: 0.6087634}
-  m_LocalPosition: {x: -1.413, y: -0.125, z: -2.478}
+  m_LocalRotation: {x: -0, y: 0.5604038, z: -0, w: -0.8282195}
+  m_LocalPosition: {x: 0.554, y: -0.125, z: 1.98}
   m_LocalScale: {x: 0.75672704, y: 0.75672704, z: 0.75672704}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6812,7 +6812,7 @@ Transform:
   - {fileID: 1748704617}
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 105, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 291.833, z: 0}
 --- !u!114 &283959097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11487,7 +11487,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4d8552907737b40489ddf3435df32146, type: 3}
   m_Color: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
   m_FlipX: 0
@@ -11506,14 +11506,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481170594}
-  m_LocalRotation: {x: 0.00000009872019, y: 0.99818254, z: -0.060264535, w: 0.0000025629997}
-  m_LocalPosition: {x: 0.265, y: 0.871, z: 0.046}
-  m_LocalScale: {x: 0.021234939, y: 0.021234939, z: 0.021234939}
+  m_LocalRotation: {x: 0.024587158, y: 0.9978796, z: -0.060246177, w: 0.0014869866}
+  m_LocalPosition: {x: 0.277, y: 0.873, z: 0.06}
+  m_LocalScale: {x: 0.02010885, y: 0.02010885, z: 0.02010885}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1577363868}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 6.91, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 6.91, y: 180, z: 2.823}
 --- !u!1 &481201974
 GameObject:
   m_ObjectHideFlags: 0
@@ -26844,7 +26844,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7ea7159b6ace39142a5289094143ec96, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -38031,7 +38031,7 @@ Transform:
   m_GameObject: {fileID: 1551010892}
   m_LocalRotation: {x: -0, y: -0.70721334, z: -0, w: 0.70700026}
   m_LocalPosition: {x: -3.011, y: 1.0805994, z: 2.341}
-  m_LocalScale: {x: 0.35026, y: 0.35026, z: 0.022211736}
+  m_LocalScale: {x: 0.36574146, y: 0.36574146, z: 0.023193493}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 906712145}
@@ -41207,14 +41207,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676720025}
-  m_LocalRotation: {x: 0.00000013411044, y: 0.9981825, z: -0.060264505, w: 0.0000018477438}
-  m_LocalPosition: {x: -0.15185586, y: 1.1351779, z: 0.01782682}
-  m_LocalScale: {x: 0.03029735, y: 0.030297352, z: 0.03029735}
+  m_LocalRotation: {x: -0.005965627, y: 0.99816465, z: -0.06026344, w: -0.0003583431}
+  m_LocalPosition: {x: -0.204, y: 1.206, z: 0.009}
+  m_LocalScale: {x: 0.02574487, y: 0.025744872, z: 0.02574487}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1577363868}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 6.91, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 6.91, y: 180, z: -0.685}
 --- !u!1 &1682718334
 GameObject:
   m_ObjectHideFlags: 0
@@ -53451,7 +53451,7 @@ HingeJoint:
   m_UseSpring: 1
   m_Spring:
     spring: 0
-    damper: 0.05
+    damper: 0
     targetPosition: 0
   m_UseMotor: 0
   m_Motor:
@@ -53460,8 +53460,8 @@ HingeJoint:
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
-    min: -90
-    max: 0
+    min: -75.77536
+    max: 85.60324
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -53598,8 +53598,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.624332, y: 1.5862789, z: 0.07695651}
-  m_Center: {x: 0.036011964, y: 0.8708074, z: 0.008067012}
+  m_Size: {x: 0.54444313, y: 1.465414, z: 0.04043424}
+  m_Center: {x: 0.036281586, y: 0.8995477, z: 0.0067335963}
 --- !u!33 &855385430838618868
 MeshFilter:
   m_ObjectHideFlags: 0
