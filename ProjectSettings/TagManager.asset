@@ -10,6 +10,7 @@ TagManager:
   - r_CableEnd
   - l_CableStart
   - l_CableEnd
+  - SoulSuck
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UI
   - Teleport
   - TEARs
-  - 
+  - Player
   - 
   - 
   - 
