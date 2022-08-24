@@ -26,6 +26,8 @@ public class ManageVoice : MonoBehaviour
         _audioSource.Play();
 
         yield return new WaitForSeconds(9f);
+        var audio = door.GetComponent<AudioSource>();
+        audio.Play();
         StartCoroutine(DoorMove());
        
     }

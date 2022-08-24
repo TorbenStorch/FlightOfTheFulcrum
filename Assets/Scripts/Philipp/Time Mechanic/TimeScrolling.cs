@@ -18,15 +18,18 @@ public class TimeScrolling : MonoBehaviour
     public Raycast _rayCastScript;
     public bool enableTimeScrolling;
     [SerializeField] GameObject heatFVX;
-    private AudioSource manipulationSound;
+    public AudioSource manipulationSound;
 
     private GameObject controllerRight;
+    private bool blendShapeObjScrolling, regularShapeObjScrolling;
 
     void Start()
     {
+
+        blendShapeObjScrolling = false; 
+        regularShapeObjScrolling = false; 
         controllerRight = this.gameObject;
-        heatFVX.SetActive(true);
-        manipulationSound = transform.GetChild(0).GetComponent<AudioSource>();
+        heatFVX.SetActive(false);
     }
 
     void Update()
@@ -36,7 +39,7 @@ public class TimeScrolling : MonoBehaviour
         
         if (_rayCastScript._rayCastHit == true && _rayCastScript.targetRenderer != null && enableTimeScrolling)
         {
-            heatFVX.SetActive(true);
+            blendShapeObjScrolling = true;
             _tearRenderer = _rayCastScript.targetRenderer;
             manipulationSound.Play();
 
@@ -53,12 +56,13 @@ public class TimeScrolling : MonoBehaviour
         }
         else
         {
-            heatFVX.SetActive(false);
+            blendShapeObjScrolling = false;
             manipulationSound.Stop();
         }
 
         if (_rayCastScript._rayCastHit == true && _rayCastScript.targetMeshRenderer != null && enableTimeScrolling)
         {
+            regularShapeObjScrolling = true;
             if (_blendValue >= 0)
                 _rayCastScript.targetMaterial.SetFloat("_BlendToPast", _blendValue / 100);
             
@@ -67,9 +71,18 @@ public class TimeScrolling : MonoBehaviour
         }
         else
         {
-            heatFVX.SetActive(false);
+            regularShapeObjScrolling = false;
         }
 
+
+        if (blendShapeObjScrolling || regularShapeObjScrolling)
+        {
+            heatFVX.SetActive(true);
+        }
+        else if (!blendShapeObjScrolling && !regularShapeObjScrolling)
+        {
+            heatFVX.SetActive(false);
+        }
         // Debug.Log("Blend to Past Value: " + _rayCastScript.targetMaterial.GetFloat("_BlendToPast").ToString());
         // Debug.Log("Blend to Past Future: " + _rayCastScript.targetMaterial.GetFloat("_BlendToFuture").ToString());
         // Debug.Log("controller rotation z = " + _blendValue / 100);
