@@ -7113,6 +7113,7 @@ GameObject:
   - component: {fileID: 283959097}
   - component: {fileID: 283959098}
   - component: {fileID: 283959100}
+  - component: {fileID: 283959101}
   m_Layer: 8
   m_Name: XR Origin
   m_TagString: Untagged
@@ -7145,7 +7146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283959092}
   m_LocalRotation: {x: -0, y: 0.5604038, z: -0, w: -0.8282195}
-  m_LocalPosition: {x: 0.554, y: -0.1006, z: 1.98}
+  m_LocalPosition: {x: 0.554, y: 0, z: 1.98}
   m_LocalScale: {x: 0.75672704, y: 0.75672704, z: 0.75672704}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7179,7 +7180,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.5
+  m_Height: 1.7
   m_Radius: 0.2
   m_SlopeLimit: 180
   m_StepOffset: 0.1
@@ -7198,6 +7199,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71003942f702d7b4aa6698b2b847f3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &283959101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283959092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b07e89eef5a9ca4a83eacbaaf7ec133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterController: {fileID: 283959098}
+  resetPosition: {x: 0, y: 0.6, z: 0}
 --- !u!1 &284395510
 GameObject:
   m_ObjectHideFlags: 0
@@ -31366,7 +31381,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 68dabbcc59eff954393acfd89752254d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.474
+      value: 0.4342
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68dabbcc59eff954393acfd89752254d,
         type: 3}
@@ -31907,12 +31922,12 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.99215686, g: 0.87324363, b: 0.50980395, a: 1}
   m_Intensity: 0.01
-  m_Range: 0.16
+  m_Range: 0.13
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -55573,7 +55588,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855385430776142881}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 

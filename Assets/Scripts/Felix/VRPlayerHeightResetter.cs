@@ -5,6 +5,7 @@ using UnityEngine;
 public class VRPlayerHeightResetter : MonoBehaviour
 {
     [SerializeField] CharacterController characterController;
+    [SerializeField] Vector3 resetPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class VRPlayerHeightResetter : MonoBehaviour
 
     private void ResetPlayer()
     {
-        characterController.center = new Vector3(0.0f, 1.0f, 0.0f);
+        //characterController.center = new Vector3(0.0f, 1.0f, 0.0f);
+        characterController.center = resetPosition;
     }
 }

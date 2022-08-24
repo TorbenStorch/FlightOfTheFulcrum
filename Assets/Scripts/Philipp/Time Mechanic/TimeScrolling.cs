@@ -25,7 +25,6 @@ public class TimeScrolling : MonoBehaviour
 
     void Start()
     {
-
         blendShapeObjScrolling = false; 
         regularShapeObjScrolling = false; 
         controllerRight = this.gameObject;
@@ -41,7 +40,6 @@ public class TimeScrolling : MonoBehaviour
         {
             blendShapeObjScrolling = true;
             _tearRenderer = _rayCastScript.targetRenderer;
-            manipulationSound.Play();
 
             if (_blendValue >= 0)
             {
@@ -57,7 +55,6 @@ public class TimeScrolling : MonoBehaviour
         else
         {
             blendShapeObjScrolling = false;
-            manipulationSound.Stop();
         }
 
         if (_rayCastScript._rayCastHit == true && _rayCastScript.targetMeshRenderer != null && enableTimeScrolling)
@@ -78,10 +75,12 @@ public class TimeScrolling : MonoBehaviour
         if (blendShapeObjScrolling || regularShapeObjScrolling)
         {
             heatFVX.SetActive(true);
+            manipulationSound.Play();
         }
         else if (!blendShapeObjScrolling && !regularShapeObjScrolling)
         {
             heatFVX.SetActive(false);
+            manipulationSound.Stop();
         }
         // Debug.Log("Blend to Past Value: " + _rayCastScript.targetMaterial.GetFloat("_BlendToPast").ToString());
         // Debug.Log("Blend to Past Future: " + _rayCastScript.targetMaterial.GetFloat("_BlendToFuture").ToString());
