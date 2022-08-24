@@ -19525,7 +19525,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746503200}
   m_LocalRotation: {x: -0, y: 0.9783588, z: -0, w: 0.20691559}
-  m_LocalPosition: {x: 2.3572, y: 0.7852, z: -1.5208}
+  m_LocalPosition: {x: 2.3761, y: 0.7852, z: -1.5124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61850,7 +61850,7 @@ MonoBehaviour:
   target: {fileID: 467472529}
   soundOrigin: {fileID: 4783704197035087305}
   closestDistanceToHead: 0.06
-  furthestDistanceToHead: 0.61
+  furthestDistanceToHead: 0.8
   volumeMax: 1
   _visibleOnSelect: 1
   _wiredSpheres: 1
@@ -61936,10 +61936,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.7150791
-  m_Height: 2.4142754
+  m_Radius: 0.90079445
+  m_Height: 2.607807
   m_Direction: 2
-  m_Center: {x: -0.0000000206113, y: 0.000000024028473, z: 0.15856235}
+  m_Center: {x: 0.16522403, y: 0.054650348, z: 0.2553258}
 --- !u!4 &4783704197035087304
 Transform:
   m_ObjectHideFlags: 0
