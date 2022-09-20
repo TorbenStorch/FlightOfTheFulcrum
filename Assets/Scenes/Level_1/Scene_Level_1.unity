@@ -3659,7 +3659,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7ea7159b6ace39142a5289094143ec96, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9ac0f287db1c8fc49af271e3f3ff4efc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3758,7 +3758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 112354140}
-  triggerObject: {fileID: 283959092}
+  triggerObject: {fileID: 467472529}
   delayTimeInSec: 23
   triggerDelay:
     m_PersistentCalls:

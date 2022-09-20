@@ -14,10 +14,9 @@ public class AudioActivator : MonoBehaviour
     private bool hasPlayed = false;
 
 
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.name == triggerObject.name && audioListening && !hasPlayed)
+        if (other.gameObject.name == triggerObject.name && audioListening && !hasPlayed)
         {
             audio.Play();
             hasPlayed = true;
