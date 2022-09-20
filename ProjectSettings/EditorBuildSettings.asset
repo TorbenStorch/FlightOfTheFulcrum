@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Felix/Scene_MainMenu.unity
     guid: d1a7dc3206320604f8b721a2c2844e1a
   - enabled: 1
