@@ -149,8 +149,8 @@ Material:
     - _Alpha2: 0
     - _AlphaClip: 0
     - _Blend: 0
-    - _BlendToFuture: 0.24718466
-    - _BlendToPast: 0.00076049566
+    - _BlendToFuture: 0.34303844
+    - _BlendToPast: 0
     - _BumpScale: 1
     - _CastShadows: 1
     - _ClearCoatMask: 0

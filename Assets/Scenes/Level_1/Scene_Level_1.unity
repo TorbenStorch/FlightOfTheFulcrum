@@ -7402,7 +7402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 283959098}
-  resetPosition: {x: 0, y: 0.6, z: 0}
+  resetPosition: {x: 0, y: 0.8, z: 0}
 --- !u!1 &284395510
 GameObject:
   m_ObjectHideFlags: 0
@@ -57648,7 +57648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pastWins: 1
-  minPastValue: 0
+  minPastValue: 0.1
   maxPastValue: 0.5
   minFutureValue: 0
   maxFutureValue: 0

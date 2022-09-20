@@ -5,6 +5,7 @@ using UnityEngine;
 public class VRPlayerHeightResetter : MonoBehaviour
 {
     [SerializeField] CharacterController characterController;
+    [Header("Set Y value to 0.8 for correct player height (Higher values mean smaller player height)")]
     [SerializeField] Vector3 resetPosition;
 
     // Start is called before the first frame update
