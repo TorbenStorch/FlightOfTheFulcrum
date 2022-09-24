@@ -13,7 +13,8 @@ public class Raycast : MonoBehaviour
 {
     private Vector3 origin;
     private Vector3 direction;
-    private  GameObject targetObject;
+    [HideInInspector]
+    public  GameObject targetObject;
 
     //public bool isGrabbed;
     public SkinnedMeshRenderer targetRenderer;

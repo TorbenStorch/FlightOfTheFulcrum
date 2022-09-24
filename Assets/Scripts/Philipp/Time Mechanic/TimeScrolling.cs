@@ -22,6 +22,7 @@ public class TimeScrolling : MonoBehaviour
 
     private GameObject controllerRight;
     private bool blendShapeObjScrolling, regularShapeObjScrolling;
+    private TearTimeMeasurement timeMeasurementScript;
 
     void Start()
     {
@@ -35,21 +36,43 @@ public class TimeScrolling : MonoBehaviour
     {
         _controllerRotZ = controllerRight.transform.rotation.z * 100;
         _blendValue = _controllerRotZ;
-        
+
+        //checks if the Tear Object can be edited in time
+        if (_rayCastScript._rayCastHit)
+        {
+            timeMeasurementScript = _rayCastScript.targetObject.GetComponent<TearTimeMeasurement>();
+            switch (timeMeasurementScript.disableEditing)
+            {
+                case false: enableTimeScroll(); break;
+                case true: disableTimeScroll(); break;
+            }
+        }
+
+        // time manipulation for objects for object with Skinned Mesh Renderer
         if (_rayCastScript._rayCastHit == true && _rayCastScript.targetRenderer != null && enableTimeScrolling)
         {
             blendShapeObjScrolling = true;
             _tearRenderer = _rayCastScript.targetRenderer;
 
+
             if (_blendValue >= 0)
             {
                 _tearRenderer.SetBlendShapeWeight(1, _blendValue);
                 _rayCastScript.targetMaterial.SetFloat("_BlendToPast", _blendValue/100);
+
+                //rest other shape key
+                _tearRenderer.SetBlendShapeWeight(0, 0);
+                _rayCastScript.targetMaterial.SetFloat("_BlendToFuture", 0);
+
             }
             else if (_blendValue < 0)
             {
                 _tearRenderer.SetBlendShapeWeight(0, _blendValue - 2 * _blendValue);
                 _rayCastScript.targetMaterial.SetFloat("_BlendToFuture", (_blendValue - 2 * _blendValue) / 100);
+
+                //reset other shape key
+                _tearRenderer.SetBlendShapeWeight(1, 0);
+                _rayCastScript.targetMaterial.SetFloat("_BlendToPast", 0);
             }
         }
         else
@@ -57,14 +80,21 @@ public class TimeScrolling : MonoBehaviour
             blendShapeObjScrolling = false;
         }
 
+        // time manipulation for objects for object with Mesh Renderer
         if (_rayCastScript._rayCastHit == true && _rayCastScript.targetMeshRenderer != null && enableTimeScrolling)
         {
             regularShapeObjScrolling = true;
             if (_blendValue >= 0)
+            {
                 _rayCastScript.targetMaterial.SetFloat("_BlendToPast", _blendValue / 100);
-            
-            else if (_blendValue < 0)           
+                _rayCastScript.targetMaterial.SetFloat("_BlendToFuture", 0);
+            }
+
+            else if (_blendValue < 0) 
+            { 
                 _rayCastScript.targetMaterial.SetFloat("_BlendToFuture", (_blendValue - 2 * _blendValue) / 100);
+                _rayCastScript.targetMaterial.SetFloat("_BlendToPast", 0);
+            }        
         }
         else
         {

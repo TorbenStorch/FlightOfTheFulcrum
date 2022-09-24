@@ -7,28 +7,50 @@ using UnityEngine.Events;
 public class DeactivateVFX : MonoBehaviour
 {
 	[SerializeField] private VisualEffect soulVfx;
-	[SerializeField] float fadeSpeed;
-	[SerializeField] float goalFadeOutThicknessAmount = 0f;
+	[SerializeField] float fadeOutSpeed, fadeInSpeed;
+	[SerializeField] float goalFadeOutThicknessAmount = 0f, goalFadeInThicknessAmount = 0f;
 
-	public UnityEvent onVfxDisabled;
+	public UnityEvent onVfxDisabled, onVfXEnable;
 
 	public void FadeVFXOut()
 	{
-		StartCoroutine(FadeVFThickness());
+		StartCoroutine(FadeOutVFThickness());
 	}
 
-	IEnumerator FadeVFThickness()
+	public void FadeVFXIn()
+	{
+		StartCoroutine(FadeInVFThickness());
+	}
+
+	IEnumerator FadeOutVFThickness()
 	{
 		float counter = soulVfx.GetFloat("Thickness"); ;
 		while (counter > goalFadeOutThicknessAmount)
 		{
-			counter -= fadeSpeed;
+			counter -= fadeOutSpeed;
 			soulVfx.SetFloat("Thickness", counter);
 			yield return null;
 		}
 		soulVfx.SetFloat("Thickness", goalFadeOutThicknessAmount);
 		soulVfx.enabled = false;
 		onVfxDisabled.Invoke();
+		yield return null;
+	}
+
+
+	IEnumerator FadeInVFThickness()
+	{
+		soulVfx.SetFloat("Thickness", 0f);
+		float counter = soulVfx.GetFloat("Thickness"); 
+		soulVfx.enabled = true;
+		while (counter < goalFadeInThicknessAmount)
+		{
+			counter += fadeInSpeed;
+			soulVfx.SetFloat("Thickness", counter);
+			yield return null;
+		}
+		soulVfx.SetFloat("Thickness", goalFadeInThicknessAmount);
+		//onVfxDisabled.Invoke();
 		yield return null;
 	}
 }
