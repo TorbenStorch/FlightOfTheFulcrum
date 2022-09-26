@@ -24,6 +24,8 @@ public class TimeScrolling : MonoBehaviour
     private bool blendShapeObjScrolling, regularShapeObjScrolling;
     private TearTimeMeasurement timeMeasurementScript;
 
+    private bool tearTimeWin_byFelix;
+
     void Start()
     {
         blendShapeObjScrolling = false; 
@@ -43,13 +45,13 @@ public class TimeScrolling : MonoBehaviour
             timeMeasurementScript = _rayCastScript.targetObject.GetComponent<TearTimeMeasurement>();
             switch (timeMeasurementScript.disableEditing)
             {
-                case false: enableTimeScroll(); break;
-                case true: disableTimeScroll(); break;
+                case false: tearTimeWin_byFelix = true; break;
+                case true: tearTimeWin_byFelix = false; break;
             }
         }
 
         // time manipulation for objects for object with Skinned Mesh Renderer
-        if (_rayCastScript._rayCastHit == true && _rayCastScript.targetRenderer != null && enableTimeScrolling)
+        if (_rayCastScript._rayCastHit == true && _rayCastScript.targetRenderer != null && enableTimeScrolling && tearTimeWin_byFelix)
         {
             blendShapeObjScrolling = true;
             _tearRenderer = _rayCastScript.targetRenderer;
@@ -81,7 +83,7 @@ public class TimeScrolling : MonoBehaviour
         }
 
         // time manipulation for objects for object with Mesh Renderer
-        if (_rayCastScript._rayCastHit == true && _rayCastScript.targetMeshRenderer != null && enableTimeScrolling)
+        if (_rayCastScript._rayCastHit == true && _rayCastScript.targetMeshRenderer != null && enableTimeScrolling && tearTimeWin_byFelix)
         {
             regularShapeObjScrolling = true;
             if (_blendValue >= 0)
