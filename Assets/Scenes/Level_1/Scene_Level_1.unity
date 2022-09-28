@@ -10594,8 +10594,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soulVfx: {fileID: 415092359}
-  fadeOutSpeed: 0.002
-  fadeInSpeed: 0.0015
+  fadeOutSpeed: 0.001
+  fadeInSpeed: 0.001
   goalFadeOutThicknessAmount: 0
   goalFadeInThicknessAmount: 0.03
   onVfxDisabled:
@@ -53372,8 +53372,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soulVfx: {fileID: 2094103176}
-  fadeOutSpeed: 0.002
-  fadeInSpeed: 0.0015
+  fadeOutSpeed: 0.001
+  fadeInSpeed: 0.001
   goalFadeOutThicknessAmount: 0
   goalFadeInThicknessAmount: 0.03
   onVfxDisabled:
@@ -66513,7 +66513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soulVfx: {fileID: 7726958448302709043}
-  fadeOutSpeed: 0.0015
+  fadeOutSpeed: 0.0005
   fadeInSpeed: 0
   goalFadeOutThicknessAmount: 0
   goalFadeInThicknessAmount: 0
@@ -66644,7 +66644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soulVfx: {fileID: 7726958448702799025}
-  fadeOutSpeed: 0.002
+  fadeOutSpeed: 0.0004
   fadeInSpeed: 0
   goalFadeOutThicknessAmount: 0
   goalFadeInThicknessAmount: 0
