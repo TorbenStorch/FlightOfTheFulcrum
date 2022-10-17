@@ -41,6 +41,7 @@ public class TearTimeMeasurement : MonoBehaviour
     [SerializeField] private float basePastValue, baseFutureValue;
 
     public UnityEvent TearCorrect;
+    public UnityEvent TearFalse;
 
     public bool enableDebug;
 
@@ -112,6 +113,15 @@ public class TearTimeMeasurement : MonoBehaviour
             Debug.Log("Past Value: " + _pastValue);
             Debug.Log("Future Value: " + _futureValue);
             //Debug.Log(gameObject.name + " in win range");
+        }
+
+        if (tearCorrect)
+        {
+            TearCorrect.Invoke();
+        }
+        else
+        {
+            TearFalse.Invoke();
         }
     }
 }
