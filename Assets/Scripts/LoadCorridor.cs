@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadCorridor : MonoBehaviour
 {
-    void Start()
+    void Awake()
     {
         SceneManager.LoadScene(2, LoadSceneMode.Additive);
     }

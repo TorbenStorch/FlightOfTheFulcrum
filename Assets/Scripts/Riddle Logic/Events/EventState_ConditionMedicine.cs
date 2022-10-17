@@ -14,6 +14,7 @@ public class EventState_ConditionMedicine : EventState
  //   public UnityEvent medicineCorrect;
     public bool medicineInCorrectPos { set; get; } //can be changed outside of this sctipt (for ex. in unity events)
 	[SerializeField] private TearTimeMeasurement bottleTearTimeMeasurement;
+	public UnityEvent cursedEvent;
 
 	void Update()
 	{
@@ -23,4 +24,11 @@ public class EventState_ConditionMedicine : EventState
 		if (medicineInCorrectPos && bottleTearTimeMeasurement.tearCorrect)
 			NextStateEvent();
 	}
+
+    public override void ToggleShades()
+    {
+        base.ToggleShades();
+		cursedEvent.Invoke();
+
+    }
 }

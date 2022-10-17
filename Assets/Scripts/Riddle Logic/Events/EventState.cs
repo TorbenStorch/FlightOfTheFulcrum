@@ -16,7 +16,7 @@ public class EventState : MonoBehaviour
 	[SerializeField] private GameObject[] _deactivateTogglableGameObjects;
 	[SerializeField] private GameObject[] _activateTogglableGameObjects;
 
-	public void ToggleShades()
+	public virtual void ToggleShades()
 	{
 		if (_deactivateTogglableGameObjects.Length != 0)
 			_deactivateTogglableGameObjects.ToggleGameObjectArray(false);
