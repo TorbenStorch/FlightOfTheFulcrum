@@ -45,6 +45,11 @@ public class TearTimeMeasurement : MonoBehaviour
 
     public bool enableDebug;
 
+    //Audio Stuff added by Felix
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioTearCorrect;
+    private bool _audioPlayed = false;
+
     void Awake()
     {
         if (resetMaterialInRuntime)
@@ -118,10 +123,24 @@ public class TearTimeMeasurement : MonoBehaviour
         if (tearCorrect)
         {
             TearCorrect.Invoke();
+
+            //Audio Stuff by Felix
+            if (!audioSource.isPlaying && _audioPlayed == false)
+            {
+                audioSource.PlayOneShot(audioTearCorrect);
+                _audioPlayed = true;
+            }
         }
         else
         {
             TearFalse.Invoke();
+
+            //Audio Stuff by Felix
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+                _audioPlayed = false;
+            }
         }
     }
 }
